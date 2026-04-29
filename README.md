@@ -27,13 +27,19 @@ A secure and scalable REST API built with **Node.js**, **Express.js**, and **Pos
 - `PUT /api/tasks/:id` - Update task title/status
 - `DELETE /api/tasks/:id` - Delete task
 
-## 🚀 Deployment (Railway)
-1. Connect your GitHub repo to **Railway**.
-2. Add a **PostgreSQL** database service.
+## 🚀 Deployment (Free Tier)
+
+### 1. Database (Neon)
+1. Use your Neon connection string as the `DATABASE_URL`.
+2. The code is already configured to handle Neon's SSL requirements.
+
+### 2. Server (Render)
+1. Connect your GitHub repo to **Render.com**.
+2. Create a **Web Service**.
 3. Add Environment Variables:
-   - `DATABASE_URL`: (Automatic from Railway)
-   - `JWT_SECRET`: (Your secure key)
-   - `NODE_ENV`: production
+   - `DATABASE_URL`: `postgresql://neondb_owner:npg_tb82SVhWZGec@ep-morning-mouse-an4a8keu.c-6.us-east-1.aws.neon.tech/neondb?sslmode=require`
+   - `JWT_SECRET`: `supersecretkey_change_me_in_production`
+   - `NODE_ENV`: `production`
 
 ## 💻 Local Setup
 1. Create a `.env` file based on the local requirements.
